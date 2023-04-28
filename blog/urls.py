@@ -22,5 +22,5 @@ from main_page.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main_page, name='main_page'),
-    path('article/', article, name='article'),
+    path('article/<int:article_id>/', article, name='article'),
 ]

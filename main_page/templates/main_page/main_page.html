@@ -83,35 +83,12 @@
 
 {% block main %}
  <main>
+  {% for post in posts %}
   <article>
-   <h2>Заголовок статьи 1</h2>
-   <p>Краткое описание статьи 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-   <a href="#">Читать далее</a>
+   <h2>{{ post.headline }}</h2>
+   <p>{{ post.text }}</p>
+   <a href="/article/{{ post.id }}/">Читать далее</a>
   </article>
-  <article>
-   <h2>Заголовок статьи 2</h2>
-   <p>Краткое описание статьи 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-   <a href="#">Читать далее</a>
-  </article>
-  <article>
-   <h2>Заголовок статьи 3</h2>
-   <p>Краткое описание статьи 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-   <a href="#">Читать далее</a>
-  </article>
-  <article>
-   <h2>Заголовок статьи 4</h2>
-   <p>Краткое описание статьи 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-   <a href="#">Читать далее</a>
-  </article>
-  <article>
-   <h2>Заголовок статьи 5</h2>
-   <p>Краткое описание статьи 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-   <a href="#">Читать далее</a>
-  </article>
-  <article>
-   <h2>Заголовок статьи 6</h2>
-   <p>Краткое описание статьи 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-   <a href="#">Читать далее</a>
-  </article>
+  {% endfor %}
  </main>
 {% endblock %}

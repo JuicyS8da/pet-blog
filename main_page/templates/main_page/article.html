@@ -18,7 +18,7 @@
    margin: 0;
    font-size: 36px;
   }
-  p {
+  main p {
   text-align: left;
   width: calc(100%);
   }
@@ -87,8 +87,8 @@
 
  {% block main %}
  <main>
-  <h2>Я не дизайнер и не фронтендер так что хз че от меня ждут</h2>
-  <p>Теги: </p>
-  <p>Текст</p>
+  <h2>{{ title }}</h2>
+  <p class="main p">Теги: {{ tag }}</p>
+  <p class="main p">{{ text }}</p>
 </main>
  {% endblock %}
